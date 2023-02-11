@@ -1,0 +1,52 @@
+.location{
+    width: 300px;
+    box-shadow: 0px 2px 3px 2px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    padding: 20px 10px 30px;
+    margin: 10px;
+    
+    &__name{
+        background-color: $septenary-color;
+        width: 277px;
+        border-radius: 20px;
+        padding: 5px 0;
+        color: $eleven-color;
+    }
+
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px
+    }
+
+    &__type{
+        border-right: 1px solid $fourthteen-color;
+        width: 50%;
+    }
+
+    &__dimension{
+        width: 50%;
+    }
+
+    &__title{
+        font-family: 'Poppins Bold';
+        font-size: 10px;
+        color: $fourthteen-color;
+    }
+
+    &__subtitle{
+        font-family: 'Poppins';
+        font-size: 14px;
+        
+    }
+
+    &__button{
+        font-family: "Poppins Bold";
+        background-color: $secondary-color;
+        font-size: 12px;
+        width: 280px;
+        border-radius: 50px;
+        border: none;
+    }
+}

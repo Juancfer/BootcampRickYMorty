@@ -1,0 +1,73 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: $septenary-color;
+    width: 100%;
+    border-bottom: 21px solid $quinary-color;
+
+    @include adaptTo('only-mobile'){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 30px 10px 40px;
+    }
+
+    @include adaptTo('big-screen'){
+        border-bottom: none;
+    }
+
+    @include adaptTo('desktop-xl'){
+        border-bottom: none;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-top: 30px;
+        border-radius: 15px;
+    }
+
+    &__text{
+        margin: 50px 0 20px 0;
+    }
+
+    &__title{
+        text-decoration: underline;
+        font-family: 'Poppins';
+        font-size: 20px;
+        color: $octonary-color;
+    }
+
+    &__subtitle{
+        font-family: 'Poppins bold';
+        font-size: 18px;
+        color: $octonary-color;
+    }
+
+    &__list{
+        margin-bottom: 50px;
+        @include adaptTo('only-mobile'){
+            margin-bottom: 0px;
+        }
+    }
+
+    &__list-text{
+        list-style: none;
+        font-size: 16px;
+        @include adaptTo('only-mobile'){
+            font-size: 18px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__list-title a{
+        text-decoration: none;
+        color: $octonary-color;
+        @include adaptTo('only-mobile'){
+            margin: 0 15px;
+        }
+    }
+}

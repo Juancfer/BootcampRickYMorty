@@ -1,0 +1,102 @@
+.card{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 15px;
+    box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    max-width: 100%;
+
+    @include adaptTo('tablet'){
+        max-width: calc(50% - 40px);
+    }
+
+    @include adaptTo('big-screen'){
+        max-width: calc(33.33% - 40px);
+    }
+
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    &__title{
+        font-size: 14px;
+        font-family: 'Poppins bold';
+        color: $eleven-color;
+
+        @include adaptTo('only-mobile'){
+            font-size: 18px;
+        }
+    }
+
+    &__status{
+        font-size: 10px;
+        font-family: 'Poppins bold';
+        width: 100%;
+        max-width: 70px;
+        color: $ten-color;
+        text-transform: uppercase;
+
+        @include adaptTo('only-mobile'){
+            font-size: 14px;
+            max-width: 90px;
+        }
+    }
+
+    &__body{
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__img{
+        max-width: 50%;
+    }
+
+    &__info-container{
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    &__info-title{
+        font-size: 10px;
+        color: $fourthteen-color;
+
+        @include adaptTo('only-mobile'){
+            font-size: 12px;
+        }
+    }
+
+    &__info{
+        font-size: 12px;
+
+        @include adaptTo('only-mobile'){
+            font-size: 16px;
+        }
+    }
+
+    &__status--alive{
+        background-color: $twelve-color;
+    }
+    &__status--dead{
+        background-color: $thirdteen-color;
+    }
+    &__status--unknow{
+        background-color: $fourthteen-color;
+    }
+
+    &__link{
+        font-size: 16px;
+        font-family: 'Poppins bold';
+        color: $eleven-color;
+        width: 100%;
+        background-color: $secondary-color;
+        border-radius: 50px;
+        text-decoration: none;
+        margin-top: 15px;
+    }
+}

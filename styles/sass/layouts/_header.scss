@@ -1,0 +1,66 @@
+.header{
+    text-align: center;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: $ten-color;
+    background-size: cover;
+    background-color: $eleven-color;
+
+    @include adaptTo('only-mobile'){
+        height: 65px;
+    }
+
+    &__title{
+        font-size: 16px;
+        text-decoration: underline;
+        @include adaptTo('only-mobile'){
+            font-size: 20px;
+        }
+    }
+
+    &__subtitle{
+        font-family: 'Poppins bold';
+        font-size: 12px;
+        @include adaptTo('only-mobile'){
+            font-size: 18px;
+        }
+    }
+
+    &--home{
+        background-image: url(../../assets/images/background.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-color: $primary-color;
+        height: 70px;
+        height: 100vh;
+       
+        @include adaptTo(desktop-xl){
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
+        .header__title{
+            font-size: 36px;
+            padding: 100px 0 0 0;
+            @include adaptTo('tablet'){
+                font-size: 45px;
+            }
+            
+            @include adaptTo('big-screen'){
+                font-size: 60px;
+            }
+        }
+        .header__subtitle{
+            font-size: 28px;
+            @include adaptTo('tablet'){
+                font-size: 33px;
+            }
+            @include adaptTo('big-screen'){
+                font-size: 50px;
+            }
+        }
+    }
+}
